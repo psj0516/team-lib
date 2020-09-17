@@ -1,0 +1,146 @@
+h3 {
+	margin-top: 30px;
+	color: #154063;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+/* 회원정보 */
+.info-table {
+	margin-left: -3px;
+	margin-right: -3px;
+	border-spacing: 3px;
+	border-collapse: separate;
+	min-width: 500px;
+	max-width: 800px;
+}
+
+.info-table th {
+	background: #154063;
+	color: white;
+}
+
+@media ( max-width : 768px) {
+	.info-table {
+		width: 100%;
+	}
+	.info-table th {
+		width: 35%;
+		background: #154063;
+		color: white;
+	}
+}
+
+.info-table td, th {
+	padding: 10px 5px;
+}
+
+.info-table td, th {
+	border: 2px solid #154063;
+}
+
+/* 작성글 */
+.inquiry-box {
+	margin-bottom: 70px;
+}
+
+.inquiry-box table {
+	width: 100%;
+}
+
+.inquiry-box table td {
+	cursor: pointer;
+	border: 2px solid #154063;
+	padding: 10px;
+}
+
+.inquiry-box table p.subject {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+/* 책정보 */
+.books-box {
+	width: 100%;
+	max-width: 700px;
+}
+
+.books-box table {
+	border: 2px solid #154063;
+	width: 100%;
+}
+
+.books-box:last-child {
+	margin-bottom: 50px;
+}
+
+.mem-book-info td {
+	padding: 10px 10px;
+}
+
+.thumb {
+	width: 100px;
+	margin: 0px;
+}
+
+.thumb img {
+	width: 100px;
+	margin: 0px;
+}
+
+.mem-book-info span.title {
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+.mem-book-info span.title:after {
+	margin-top: 20px;
+	content: "";
+	display: block;
+	width: 15%;
+	border-bottom: 2px solid #154063;
+	content: "";
+}
+
+.last-row {
+	border-bottom: 1px solid #154063;
+}
+
+/* 대출이력 */
+.rent-box {
+	width: 100%;
+	max-width: 700px;
+	margin-bottom: 50px;
+}
+
+.rent-box table {
+	width: 100%;
+	border: 2px solid #154063;
+}
+
+.rent-h2 {
+	display: inline-block;
+}
+
+.rent-info {
+	font-size: 0.8em;
+	color: #6f8ba2;
+}
+
+.rent-date {
+	color: #6f8ba2;
+}
+
+.book-ad {
+	width: 30%;
+	text-align: right;
+	vertical-align: bottom;
+}
+
+.more-info {
+	float: right;
+}
+
+.more-info a {
+	color: #154063;
+}

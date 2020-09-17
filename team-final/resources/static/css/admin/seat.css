@@ -1,0 +1,123 @@
+h3 {
+	margin-top: 40px;
+	color: #154063;
+	font-weight: 800;
+}
+
+.seat-box {
+	border: 2px solid #154063;
+	padding: 15px;
+	margin-right: 20px;
+}
+
+/* 좌석 디자인 */
+input[type="radio"]+label {
+	width: 45px;
+	height: 45px;
+	border: 2px solid #154063;
+	background: white;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px;
+}
+
+input[type="radio"]:checked+label {
+	background: #154063;
+	color: white;
+}
+
+input[type="radio"]:disabled+label {
+	background: #efefef;
+	cursor: not-allowed;
+	color: gray;
+}
+
+.seat-row {
+	float: left;
+	margin-left: 10px;
+}
+
+.seat-row:first-child {
+	margin-left: 0px;
+}
+
+.seat-row:nth-child(even) {
+	margin-left: 20px;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+/* 현황 테이블 */
+.seat-status h2 {
+	font-weight: 700;
+	color: #e89415;
+	font-size: 1em;
+	margin-top: 0px;
+}
+
+.seat-status {
+	margin-bottom: 50px;
+}
+
+.seat-status .table {
+	border: 2px solid #154063;
+}
+
+.seat-status .table th, td {
+	border-top: none !important;
+}
+
+.seat-status .table tr {
+	border-bottom: 1px solid #154063;
+}
+
+/* 체크박스 */
+input[type="checkbox"]+label {
+	display: inline-block;
+	margin: 0px 5px;
+	width: 15px;
+	height: 15px;
+	background: url("/images/member/checkbox.png") no-repeat center;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label {
+	background: url("/images/member/checkbox-checked.png") no-repeat center;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+/* 버튼 */
+#wrapper button {
+	width: 90px;
+	border: none;
+	background: #154063;
+	color: #efefef;
+	padding: 10px 0px;
+	cursor: pointer;
+}
+
+#wrapper button:focus {
+	outline: none;
+}
+
+.seat-box input[type="submit"] {
+	width: 120px;
+	border: none;
+	background: #154063;
+	color: #efefef;
+	padding: 10px 0px;
+	cursor: pointer;
+}
+
+.seat-box input[type="submit"]:focus {
+	outline: none;
+}
+
+.table > thead > tr > th {
+	border-bottom: 2px solid #154063;
+}

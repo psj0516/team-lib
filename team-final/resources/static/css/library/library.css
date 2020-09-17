@@ -1,0 +1,231 @@
+/* b_apply */
+#main-box_b_ap {
+	width: 100%;
+	margin-bottom: 50px;
+	background: #154063;
+	padding: 15px;
+}
+
+#main-box_b_ap h2 {
+	margin: 0px;
+	color: #efefef;
+	font-weight: 800;
+	float: left;
+}
+
+.b_ap_li {
+	width: 100%;
+	height: 60px;
+	background: #154063;
+	padding: 15px;
+	margin-top: 40px;
+}
+
+.b_ap_li h2 {
+	margin: 0px;
+	margin-bottom: 10px;
+	color: #efefef;
+	font-weight: 800;
+}
+
+#apply_li {
+	width: 100%;
+}
+
+#apply_li tr {
+	height: 60px;
+	cursor: pointer;
+}
+
+.lq_list1 {
+	text-align: center;
+	background-color: #efefef;
+	color: #154063;
+	padding: 5px;
+}
+
+.lq_list2 {
+	text-align: center;
+	background-color: #154063;
+	color: #efefef;
+	padding: 7px;
+}
+
+#lq_n1 {
+	color: #154063;
+}
+
+#lq_n2 {
+	color: #efefef;
+}
+
+#inq_con {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+#accordion {
+	border: 3px solid #154063;
+	width: 100%;
+	background-color: #efefef;
+	margin-bottom: 30px;
+	padding: 5px 10px;
+}
+
+.card-header {
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.card-header a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: grey;
+}
+
+.card-body {
+	margin-left: 20px;
+}
+
+.card {
+	margin: 5px;
+}
+
+#b_a_noti {
+	margin-left: 20px;
+}
+
+#b_a_noti h2 {
+	/* margin: 0px; */
+	margin-bottom: 10;
+	font-weight: 700px;
+}
+
+#b_a_noti li {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.b_ap_search {
+	text-align: right;
+	width: 50%;
+	margin-top: 10px;
+	float: right;
+	margin-bottom: 20px;
+}
+
+.b_ap_search button {
+	width: 20%;
+	height: 40px;
+	border: 2px solid white;
+	background: #154063;
+	outline: none;
+	color: #efefef;
+	font-size: 16px;
+}
+
+.b_ap_search input {
+	float: left;
+	display: inline-block;
+	background: white;
+	height: 40px;
+	width: 80%;
+	max-width: 550px;
+	border: 2px solid white;
+	padding-left: 10px;
+	font-size: 16px;
+	padding: 10px;
+	border: 2px solid white;
+	outline: none;
+	display: inline-block;
+}
+
+#b_a_btn {
+	text-align: right;
+}
+
+#b_a_btn button:focus {
+	outline: none;
+}
+
+@media ( max-width : 650px) {
+	.b_ap_search {
+		width: 100%;
+	}
+	#apply_li td {
+		font-size: 12px;
+	}
+}
+
+#apply_li tr {
+	height: 60px;
+}
+
+.main-box table tr {
+	background-color: white;
+	width: 100%;
+	height: 40px;
+	background: #efefef;
+	border: 1px solid #154063;
+}
+
+.pagination {
+	margin-top: 30px;
+}
+
+.page-item a {
+	color: #154063 !important;
+}
+
+.page-item a:hover {
+	background: #d6dde4 !important;
+}
+
+/* 0909 수정 */
+.search-box {
+	margin-top: 10px
+}
+
+.search-box select {
+	border-radius: 0;
+	height: 40px;
+	background: #efefef;
+	outline: none;
+	color: #154063;
+	padding: 5px;
+	text-align-last: left !important;
+	border: 2px solid #efefef;
+}
+
+.search-box input {
+	margin-left: -5px;
+	height: 40px;
+	border: 2px solid #efefef;
+	outline: none;
+	padding: 5px;
+}
+
+.search-box button {
+	margin-left: -5px;
+	padding: 5px 20px;
+	height: 40px;
+	border: 2px solid #efefef;
+	background: #efefef;
+	outline: none;
+	color: #154063;
+}
+
+.title {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+#b_a_btn button {
+	border: 2px solid #efefef;
+	background-color: efefef;
+	padding: 7px 25px 7px 25px;
+	display: inline-block;
+	text-color: black;
+	text-align: center;
+	display: inline-block;
+}

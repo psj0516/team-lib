@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 BoardMapper 인터페이스 이름으로 설정 -->
+<mapper namespace="com.example.mapper.BookSubMapper">
+
+	<select id="getReserveState" resultType="int">
+		SELECT count(bookcode) as bookcount from sub where (is_rent = 1 or is_reserve = 1) and bookcode=#{bookcode} group by bookcode=#{bookcode};
+	</select>
+
+	<select id="getSerialNumsearch" resultType="int">
+		SELECT min(serial_num) as min_serialnum from ub where (is_rent = 0 and is_reserve = 0) and bookcode=#{bookcode} group by bookcode;
+	</select>
+	
+	<select id="getBookSubList" resultType="bookSubVo">
+		SELECT * FROM sub WHERE bookcode = #{bookcode};
+	</select>
+	
+	<insert id="insertSubBook">
+		INSERT INTO sub (bookcode,bookname) 
+		VALUES (#{bookcode}, #{bookname}) 
+		<!-- 매퍼.java에서 boardvo를 매개변수로 넣어줘서 values를 넣어준것 아니면 그냥 values 없이 사용 가능 아래 getBoardByNum과 비교 -->
+	</insert>
+	
+	<insert id="recordReturn">
+		INSERT INTO book_rent (serial_num,bookcode,bookname,renter,rent_start,return_date)
+		VALUES (#{book.serialNum}, #{book.bookcode}, #{book.bookname}, #{book.renter}, #{book.rentStart}, #{reserveStart})
+	</insert>
+
+</mapper>

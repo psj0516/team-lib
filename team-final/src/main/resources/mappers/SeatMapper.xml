@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.SeatMapper">
+	<insert id="insert">
+		INSERT INTO seat (seat_status) 
+		VALUES (false) 
+	</insert>
+	
+	<select id="resetAI">
+		ALTER TABLE seat AUTO_INCREMENT = ${count}
+	</select>
+
+	<update id="reservation">
+		UPDATE seat
+		SET mem_num=#{memNum}, reserve_time=#{reserveTime}, end_time=#{endTime}, seat_status=#{seatStatus}
+		WHERE seat_num = #{seatNum} 
+	</update>
+	
+	<update id="exitBySeatNum">
+		UPDATE seat
+		SET mem_num=null, reserve_time=null, end_time=null, seat_status=false
+		WHERE seat_num = #{seatNum} 
+	</update>
+	
+ 	<select id="getSeatAndName" resultMap="seatAndName">
+		SELECT s.seat_num, s.mem_num, s.reserve_time, s.end_time, s.seat_status, m.id, m.name
+		FROM seat s join member m 
+		ON s.mem_num = m.mem_num
+	</select>
+	<resultMap id="seatAndName" type="seatVo">
+		<id column="seat_num" property="seatNum" />
+		<result column="mem_num" property="memNum" />
+		<result column="reserve_time" property="reserveTime" />
+		<result column="end_time" property="endTime" />
+		<result column="seat_status" property="seatStatus" />
+		<result column="id" property="id" />
+		<result column="name" property="name" />
+	</resultMap>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

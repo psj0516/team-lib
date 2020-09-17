@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 MemberMapper 인터페이스 이름으로 설정 -->
+<mapper namespace="com.example.mapper.NoticeMapper">
+
+	<!-- 게시글 생성 -->
+	<insert id="insertNotice">
+		INSERT INTO notice (num,writer,readcount,fix,file,subject,content,reg_date) 
+		VALUES (#{num}, #{writer}, #{readcount}, #{fix}, #{file}, #{subject}, #{content}, #{regDate}) 
+	</insert>
+
+
+	<!-- 공지글 전체 가져오기 -->
+	<select id= "getNotices" resultType="noticeVo"> 
+		SELECT *
+		FROM notice
+		<if test="category == 'content'">
+			WHERE content LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'subject'">
+			WHERE subject LIKE CONCAT('%',#{search},'%') 
+		</if>
+		<if test="category == 'writer'">
+			WHERE writer LIKE CONCAT('%',#{search},'%') 
+		</if>
+		
+		ORDER BY fix DESC, num DESC
+		limit #{startRow}, #{pageSize}
+	</select>
+	
+	
+	<!-- 공지글 전체 갯수 -->
+	<select id="getTotalCount" resultType="int">
+		select count(*)
+		from notice
+		<if test="category == 'content'">
+			WHERE content LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'subject'">
+			WHERE subject LIKE CONCAT('%',#{search},'%') 
+		</if>
+		<if test="category == 'writer'">
+			WHERE writer LIKE CONCAT('%',#{search},'%') 
+		</if>
+	</select>
+	
+	<!-- 글번호로 공지글 하나 가져오기 -->
+	<select id="getNoticeByNum" resultType="noticeVo">
+		SELECT * FROM notice WHERE num = #{num}
+	</select>
+	
+	<!-- 조회수 수정 -->
+	<update id="updateReadcount">
+		UPDATE notice
+		SET readcount = readcount + 1 
+		WHERE num = #{num}
+	</update>
+	
+	<!-- 공지글 수정 -->
+	<update id="update">
+		UPDATE notice 
+		SET subject = #{subject}, content = #{content}, fix = #{ fix } 
+		WHERE num = #{num}
+	</update>
+
+		
+	<select id="getNoticeAndNoitcefilesByNum" resultMap="noticeAndNoticefiles">
+		SELECT b.num, b.writer, b.fix, b.file, b.subject, b.content, b.readcount, b.reg_date, a.* 
+		FROM notice b LEFT OUTER JOIN noticefile a 
+		ON b.num = a.bno 
+		WHERE b.num = #{num} 
+	</select>
+	
+	<resultMap id="noticeAndNoticefiles" type="noticeVo">
+		<id column="num" property="num" />
+		<result column="writer" property="writer" />
+		<result column="fix" property="fix" />
+		<result column="file" property="file" />
+		<result column="subject" property="subject" />
+		<result column="content" property="content" />
+		<result column="readcount" property="readcount" />
+		<result column="reg_date" property="regDate" />
+		<collection property="noticefileList" ofType="noticefileVo">
+			<id column="uuid" property="uuid"/>
+			<result column="filename" property="filename"/>
+			<result column="uploadpath" property="uploadpath"/>
+			<result column="bno" property="bno"/>
+		</collection>
+	</resultMap>
+
+		
+</mapper>

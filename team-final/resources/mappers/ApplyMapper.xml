@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.ApplyMapper">
+
+	<!-- 신청글 생성 -->
+	<insert id="insertApply">
+		INSERT INTO book_apply (num,mem_num,name,id,secret,status,bookname,author,reg_date,publisher,pub_year,reason,content) 
+		VALUES (#{num}, #{memNum}, #{name}, #{id}, #{secret}, #{status}, #{bookname}, #{author}, #{regDate}, #{publisher}, #{pubYear}, #{reason}, #{content}) 
+		<!-- 매퍼.java에서 boardvo를 매개변수로 넣어줘서 values를 넣어준것 아니면 그냥 values 없이 사용 가능 아래 getBoardByNum과 비교 -->
+	</insert>
+	
+	
+	<!-- 신청글 전체 갯수 -->
+	<select id="getTotalCount" resultType="int">
+		select count(*)
+		from book_apply
+		<if test="category == 'bookname'">
+			WHERE bookname LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'name'">
+			WHERE name LIKE CONCAT('%',#{search},'%') 
+		</if>
+	</select>
+	
+	<!-- 게시글 전체 가져오기 -->
+	<select id= "getApplys" resultType="applyVo"> 
+		SELECT *
+		FROM book_apply
+		<if test="category == 'bookname'">
+			WHERE bookname LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'name'">
+			WHERE name LIKE CONCAT('%',#{search},'%') 
+		</if>
+		ORDER BY num DESC
+		limit #{startRow}, #{pageSize}
+	</select>
+	
+	
+		<!-- 번호로 신청글 가져오기 -->
+	<select id="getApplyByNum" resultType="applyVo">
+		SELECT * FROM book_apply WHERE num = #{num}
+	</select>
+	
+		<!-- 신청글 수정 -->
+	<update id="update">
+		UPDATE book_apply 
+		SET secret = #{secret}, name = #{name}, bookname = #{bookname}, author = #{authoer}, publisher = #{publisher}, pub_year = #{pubYear},  
+		WHERE num = #{num}
+	</update>
+
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,400 @@
+.inq_li {
+	width: 100%;
+	height: 60px;
+	background: #154063;
+	padding: 15px;
+	margin-top: 40px;
+}
+
+.inq_li h2 {
+	margin: 0px;
+	color: #efefef;
+	font-weight: 800;
+}
+
+#accordion {
+	width: 100%;
+	border: 3px solid #154063;
+	background-color: #154063;
+	margin-bottom: 30px;
+	padding: 8px 10px;
+}
+
+#main-box_inq {
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+.main-box {
+	background: #154063;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+#main-box_inq h2 {
+	float: left;
+	color: #efefef;
+	font-weight: 800;
+	color: #efefef;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#n_btn button {
+	float: right;
+	margin-top: 10px;
+	border: none;
+	background: white;
+	padding: 10px 15px;
+	color: #154063;
+	font-weight: 600;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+#n_btn button:focus {
+	outline: none;
+}
+
+#qna_li {
+	margin-top: 15px;
+}
+
+.main-box table {
+	width: 100%;
+	margin-top: 40px;
+	background-color: #efefef;
+}
+
+#qna_li tr {
+	height: 60px;
+}
+
+.main-box table tr {
+	border-bottom: 1px solid #154063;
+}
+
+.main-box table td {
+	cursor: pointer;
+}
+
+.pagination {
+	margin-top: 30px;
+}
+
+.page-item a {
+	color: #154063 !important;
+}
+
+.page-item a:hover {
+	background: #d6dde4 !important;
+}
+
+/* 질문 */
+.panel {
+	margin-bottom: 0px;
+}
+
+.panel-custom {
+	border: 1px solid #154063;
+	border-radius: 0px;
+	color: black;
+}
+
+.panel-custom .panel-heading {
+	color: #8a6d3b;
+	padding: 20px 15px;
+	vertical-align: middle;
+	background-color: #d6dde4;
+	border-color: #154063;
+}
+
+.panel-title a {
+	color: black;
+	text-decoration: none;
+}
+
+.admin-check {
+	width: 15px;
+}
+
+.admin-check input[type="checkbox"]+label {
+	margin-left: 5px;
+	display: inline-block;
+	margin: 0px 5px;
+	width: 15px;
+	height: 15px;
+	background: url("/images/member/checkbox.png") no-repeat center;
+	cursor: pointer;
+}
+
+.admin-check input[type="checkbox"]:checked+label {
+	background: url("/images/member/checkbox-checked.png") no-repeat center;
+}
+
+.admin-check input[type="checkbox"] {
+	display: none;
+}
+
+/* 문의글 */
+#main-box_inq_con_li h2 {
+	margin: 0px;
+	color: #154063;
+	font-weight: 800;
+}
+
+#main-box_inq_con_li {
+	border: 3px solid #154063;
+	background-color: white;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	width: 100%;
+	padding: 40px 40px 40px 40px;
+}
+
+.inq_con_info_list {
+	padding: 0px 24px 20px 24px;
+	font-size: 0;
+}
+
+.inq_con_info_item:first-child {
+	margin-left: -20px;
+	padding-left: 0;
+}
+
+.inq_con_info_item {
+	display: inline-block;
+	position: relative;
+	font-size: 15px;
+	font-weight: 400;
+	color: #4d4d4d;
+	margin-left: 10px;
+}
+
+#inq_con_btn button {
+	border: 1px solid #154063;
+	background-color: #154063;
+	color: white;
+	width: 70px;
+	height: 40px;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.inq_con_answer {
+	text-decoration: none !important;
+	color: black;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 20px;
+}
+
+.inq_con_an_list {
+	font-size: 0;
+	margin: 5px 0 10px 40px;
+}
+
+.inq_con_an_item:first-child {
+	margin-left: -20px;
+	padding-left: 0;
+}
+
+.inq_con_an_item {
+	display: inline-block;
+	position: relative;
+	font-size: 15px;
+	font-weight: 400;
+	color: #4d4d4d;
+	margin-left: 10px;
+}
+
+#main-box_inq_con_li a {
+	color: #154063;
+}
+
+.inq_con_line1 {
+	color: #54728a;
+	border: thin solid #54728a;
+	width: 100%;
+}
+
+.inq_con_line2 {
+	color: #6f8ba2;
+	border: 0.5px solid #6f8ba2;
+	width: 100%;
+	margin-top: -10px;
+}
+
+.inq_con_line3 {
+	color: #6f8ba2;
+	border: 0.5px solid #6f8ba2;
+	width: 100%;
+	margin-top: 0;
+}
+
+.inq_con_line4 {
+	color: #54728a;
+	border: thin solid #54728a;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.inq_con_line5 {
+	color: #54728a;
+	border: thin solid #54728a;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.main-box i {
+	color: #154063;
+	margin-right: 10px;
+}
+
+.main-box  h4 {
+	color: #154063;
+	font-weight: 800;
+}
+
+@media ( max-width : 591px) {
+	.inq_con_info_list span, .inq_con_an_list span {
+		font-size: 11px;
+	}
+}
+
+/* 댓글쓰기 */
+.comment-box {
+	border: 2px solid #154063;
+	margin-top: 10px !important;
+	background: #f9f9f9 !important;
+	padding: 10px;
+}
+
+.comment-box p {
+	margin-bottom: 2px;
+}
+
+.comment-box .name {
+	font-weight: 700;
+}
+
+.comment-box .date {
+	font-size: 0.9em;
+	color: #a8a8a8
+}
+
+.comment-write {
+	border: 2px solid #154063;
+	margin-top: 10px !important;
+	background: #f9f9f9 !important;
+	padding: 10px;
+}
+
+.comment-write textarea {
+	resize: none;
+	width: 100%;
+	border: 1px solid #154063;
+}
+
+.comment-write textarea:focus {
+	outline: none;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.comment-write button {
+	border: 1px solid #154063;
+	background-color: #154063;
+	color: white;
+	width: 70px;
+	height: 40px;
+	font-size: 15px;
+}
+
+.comment-button {
+	text-align: right;
+}
+
+.comment-btn button {
+	margin-top: 5px;
+	border: 1px solid #154063;
+	background-color: #154063;
+	color: white;
+	width: 70px;
+	height: 40px;
+	font-size: 15px;
+}
+
+button:focus {
+	outline: none;
+}
+
+.invisible-box textarea {
+	resize: none;
+	width: 100%;
+	border: 1px solid #154063;
+}
+
+.invisible-box textarea:focus {
+	outline: none;
+}
+
+.invisible-box {
+	margin-left: 30px;
+	border: 2px solid #154063;
+	margin-top: 10px !important;
+	background: #f9f9f9 !important;
+	padding: 10px;
+}
+
+.invisible-box button {
+	border: 1px solid #154063;
+	background-color: #154063;
+	color: white;
+	width: 70px;
+	height: 40px;
+	font-size: 15px;
+}
+
+.inq_con_answer_area p {
+	margin-left: 20px;
+}
+
+/* 0909 수정 - 검색창 */
+#table_search {
+	margin-top: 10px;
+}
+
+#table_search select {
+	border-radius: 0;
+	height: 40px;
+	background: #efefef;
+	outline: none;
+	color: #154063;
+	padding: 5px;
+	text-align-last: left !important;
+	border: 2px solid #efefef;
+}
+
+#table_search .input_box {
+	margin-left: -5px;
+	width: 155px;
+	padding: 5px;
+	height: 40px;
+	border: 2px solid #efefef;
+	outline: none;
+}
+
+#table_search button {
+	margin-left: -5px;
+	padding: 5px 20px;
+	height: 40px;
+	border: 2px solid #efefef;
+	background: #efefef;
+	outline: none;
+	color: #154063;
+}

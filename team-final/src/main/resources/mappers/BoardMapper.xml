@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.BoardMapper">
+
+	<!-- 게시글 생성 -->
+	<insert id="insertBoard">
+		INSERT INTO board (num,type,mem_num,name,id,secret,readcount,status,subject,content,reg_date,re_ref,re_lev,re_seq) 
+		VALUES (#{num}, #{type}, #{memNum}, #{name}, #{id}, #{secret}, #{readcount}, #{status}, #{subject}, #{content}, #{regDate}, #{reRef}, #{reLev}, #{reSeq}) 
+		<!-- 매퍼.java에서 boardvo를 매개변수로 넣어줘서 values를 넣어준것 아니면 그냥 values 없이 사용 가능 아래 getBoardByNum과 비교 -->
+	</insert>
+
+
+	<!-- 게시글 전체 가져오기 -->
+	<select id= "getBoards" resultType="boardVo"> 
+		SELECT *
+		FROM board
+		<if test="category == 'contentAndSubject'">
+			WHERE content LIKE CONCAT('%',#{search},'%') or subject LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'content'">
+			WHERE content LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'subject'">
+			WHERE subject LIKE CONCAT('%',#{search},'%') 
+		</if>
+		<if test="category == 'name'">
+			WHERE name LIKE CONCAT('%',#{search},'%') 
+		</if>
+		
+		ORDER BY re_ref DESC, re_Seq ASC
+		limit #{startRow}, #{pageSize}
+	</select>
+	
+	
+	<!-- 게시글 전체 갯수 -->
+	<select id="getTotalCount" resultType="int">
+		select count(*)
+		from board
+		<if test="category == 'contentAndSubject'">
+			WHERE content LIKE CONCAT('%',#{search},'%') or subject LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'content'">
+			WHERE content LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'subject'">
+			WHERE subject LIKE CONCAT('%',#{search},'%') 
+		</if>
+		<if test="category == 'name'">
+			WHERE name LIKE CONCAT('%',#{search},'%') 
+		</if>
+	</select>
+	
+	<!-- 글번호로 게시글 하나 가져오기 -->
+	<select id="getBoardByNum" resultType="boardVo">
+		SELECT * FROM board WHERE num = #{num}
+	</select>
+	
+	<!-- 조회수 수정 -->
+	<update id="updateReadcount">
+		UPDATE board 
+		SET readcount = readcount + 1 
+		WHERE num = #{num}
+	</update>
+	
+	<!-- 답변상태 완료로 수정 -->
+	<update id="updateStatus">
+		UPDATE board 
+		SET status = 2
+		WHERE num = #{reRef}
+	</update>
+	
+		<!-- 답변상태 대기 중으로 수정 -->
+	<update id="updateStatus2">
+		UPDATE board 
+		SET status = 1 
+		WHERE num = #{reRef}
+	</update>
+
+	
+	<!-- 게시글 수정 -->
+	<update id="update">
+		UPDATE board 
+		SET secret = #{secret}, subject = #{subject}, content = #{content} 
+		WHERE num = #{num}
+	</update>
+	
+	
+	<update id="updateReSeqByReRef">
+		UPDATE board 
+		SET re_seq = re_seq + 1 
+		WHERE re_ref = #{reRef} 
+		AND re_seq > #{reSeq} 
+	</update>
+	
+	
+		
+</mapper>

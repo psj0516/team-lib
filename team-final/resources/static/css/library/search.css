@@ -1,0 +1,118 @@
+/* b_search */
+.b_search_bar {
+	text-align: center;
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+.b_category {
+	margin-right: -10px;
+	border-radius: 0;
+	height: 45px;
+	width: 20%;
+	max-width: 110px;
+	border: 2px solid #154063;
+	background: #154063;
+	outline: none;
+	color: #efefef;
+	appearance: none;
+	padding: 5px;
+	text-align-last: left !important;
+	border: 2px solid #154063;
+}
+
+.b_search_bar select {
+	background: url("/images/icon/down.png") #154063 no-repeat 190% 50%;
+}
+
+.b_search_bar select::-ms-expand {
+	display: none;
+}
+
+.b_search_bar button {
+	margin-left: -10px;
+	width: 20%;
+	max-width: 110px;
+	height: 45px;
+	border: 2px solid #154063;
+	background: #154063;
+	outline: none;
+	color: #efefef;
+}
+
+.b_search_bar input {
+	width: 55%;
+	max-width: 700px;
+	height: 45px;
+	padding: 10px;
+	border: 2px solid #154063;
+	outline: none;
+	height: 45px;
+}
+
+#bsh {
+	margin-bottom: 50px
+}
+
+.pagination {
+	margin-top: 30px;
+}
+
+.page-item a {
+	color: #154063 !important;
+}
+
+.page-item a:hover {
+	background: #d6dde4 !important;
+}
+
+/* 책정보 */
+.book-info {
+	margin: auto;
+	width: 100%;
+	max-width: 900px;
+}
+
+.books-box {
+	width: 100%;
+	margin: auto;
+	border: 2px solid #154063;
+}
+
+.books-box tr {
+	cursor: pointer;
+}
+
+.books-box td {
+	padding: 10px 10px;
+}
+
+.thumb {
+	width: 100px;
+	margin: 0px;
+}
+
+.thumb img {
+	width: 100px;
+	margin: 0px;
+}
+
+.last-row {
+	border-bottom: 1px solid #154063;
+}
+
+.infoButton {
+	border: 2px solid #154063;
+	background: #154063;
+	outline: none;
+	color: #efefef;
+}
+
+.book-title {
+	padding: 10px 10px 0px 10px !important;
+}
+
+.book-dt {
+	padding: 0px 10px 10px 10px !important;
+}

@@ -1,0 +1,113 @@
+.inq_li {
+	width: 100%;
+	height: 60px;
+	background: #154063;
+	padding: 15px;
+	margin-top: 40px;
+}
+
+.inq_li h2 {
+	margin: 0px;
+	color: #efefef;
+	font-weight: 800;
+}
+
+#accordion {
+	width: 100%;
+	border: 3px solid #154063;
+	background-color: #154063;
+	margin-bottom: 30px;
+	padding: 8px 10px;
+}
+
+#main-box_inq {
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+
+.main-box {
+	background: #154063;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+#main-box_inq h2 {
+	float: left;
+	color: #efefef;
+	font-weight: 800;
+	color: #efefef;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#n_btn button {
+	float: right;
+	margin-top: 10px;
+	border: none;
+	background: #efefef;
+	padding: 10px 15px;
+	color: #154063;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+#n_btn button:focus {
+	outline: none;
+}
+
+#qna_li {
+	margin-top: 15px;
+}
+
+.main-box table {
+	width: 100%;
+	margin-top: 40px;
+	background-color: #efefef;
+	margin-top: 40px;
+}
+
+#qna_li tr {
+	height: 60px;
+}
+
+.main-box table tr {
+	background-color: white;
+	border-bottom: 1px solid #154063;
+}
+
+.pagination {
+	margin-top: 30px;
+}
+
+.page-item a {
+	color: #154063 !important;
+}
+
+.page-item a:hover {
+	background: #d6dde4 !important;
+}
+
+/* 질문 */
+.panel {
+	margin-bottom: 0px;
+}
+
+.panel-custom {
+	border: 1px solid #154063;
+	border-radius: 0px;
+	color: black;
+}
+
+.panel-custom .panel-heading {
+	color: #8a6d3b;
+	padding: 20px 15px;
+	vertical-align: middle;
+	background-color: #d6dde4;
+	border-color: #154063;
+}
+
+.panel-title a{
+	color: black;
+	text-decoration: none;
+}

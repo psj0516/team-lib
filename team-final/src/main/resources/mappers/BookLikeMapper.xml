@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 BoardMapper 인터페이스 이름으로 설정 -->
+<mapper namespace="com.example.mapper.BookLikeMapper">
+
+	<select id="getBookLike" resultType="boolean">
+		SELECT count(*) FROM
+		book_like WHERE mem_num = #{memNum} and bookcode = #{bookCode}
+	</select>
+
+	<delete id="delBookLike">
+		DELETE from book_like where mem_num = #{memNum} and
+		bookcode = #{bookCode};
+	</delete>
+
+	<insert id="insertBookLike">
+		INSERT INTO book_like VALUES (#{memNum},
+		#{bookCode});
+	</insert>
+
+	<select id="getLikeListByMemNumWithPaging" resultType="BookVo">
+		SELECT bl.bookcode,
+		b.bookname, b.publisher,
+		b.author, b.pub_year, b.hold_date,
+		b.rentcnt, b.bookamount,b.description
+		FROM book_like bl, books b
+		WHERE bl.bookcode=b.bookcode and bl.mem_num = #{memNum}
+		ORDER BY b.bookname
+		LIMIT #{startRow},#{pageSize};
+	</select>
+	
+	<select id="getLikeListByMemNum" resultType="BookVo">
+		SELECT bl.bookcode,
+		b.bookname, b.publisher,
+		b.author, b.pub_year, b.hold_date,
+		b.rentcnt, b.bookamount,b.description
+		FROM book_like bl, books b
+		WHERE bl.bookcode=b.bookcode and bl.mem_num = #{memNum}
+		ORDER BY b.bookname;
+	</select>
+	
+
+
+</mapper>

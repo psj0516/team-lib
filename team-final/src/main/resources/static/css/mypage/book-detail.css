@@ -1,0 +1,82 @@
+h2 {
+	color: #154063;
+	font-weight: 800;
+	margin-top: 40px;
+}
+
+.books-box {
+	width: 100%;
+	max-width: 700px;
+	border: 2px solid #154063;
+}
+
+.text-center {
+	max-width: 700px;
+}
+
+td {
+	padding: 10px 10px;
+}
+
+.thumb {
+	width: 100px;
+	margin: 0px;
+}
+
+.thumb img {
+	width: 100px;
+	margin: 0px;
+}
+
+span.title {
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+span.title:after {
+	margin-top: 20px;
+	content: "";
+	display: block;
+	width: 15%;
+	border-bottom: 2px solid #154063;
+	content: "";
+}
+
+.book-ad {
+	width: 30%;
+	text-align: right;
+	vertical-align: bottom;
+}
+
+.book-ad label {
+	color: #c0c0c0;
+	font-size: 1.1em;
+}
+
+.book-ad input {
+	display: none;
+}
+
+.book-ad .rsv:checked+label {
+	color: #fac029;
+}
+
+.book-ad .fav:checked+label {
+	color: #fe594b;
+}
+
+.last-row {
+	border-bottom: 1px solid #154063;
+}
+
+.pagination {
+	margin-top: 30px;
+}
+
+.page-item a {
+	color: #154063 !important;
+}
+
+.page-item a:hover {
+	background: #d6dde4 !important;
+}

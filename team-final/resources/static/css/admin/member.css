@@ -1,0 +1,47 @@
+h3 {
+	margin-top: 40px;
+	color: #154063;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+.member-table {
+	width: 100%;
+}
+
+.member-table th {
+	padding: 8px 8px 8px 0px;
+	text-align: center;
+	background: #154063;
+	color: white;
+}
+
+.member-table td {
+	cursor: default;
+	padding: 8px 8px 8px 0px;
+	text-align: center;
+	border-bottom: 1px dashed #154063;
+	padding: 8px 8px 8px 0px;
+}
+
+.member-table td a {
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+}
+
+.member-table tr:last-child td {
+	border-bottom: 1px solid #154063;
+}
+
+.pagination {
+	margin-top: 30px;
+}
+
+.page-item a {
+	color: #154063 !important;
+}
+
+.page-item a:hover {
+	background: #d6dde4 !important;
+}

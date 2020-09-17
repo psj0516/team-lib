@@ -1,0 +1,152 @@
+h2 {
+	color: #154063;
+	font-weight: 800;
+	margin-top: 40px;
+}
+
+.seat-res-box {
+	border: 2px solid #154063;;
+	margin-bottom: 10px;
+	padding-right: 15px;
+}
+
+/* 좌석 감싸는 박스 */
+.seat-box {
+	padding: 15px;
+	margin-right: 20px;
+	float: left;
+}
+
+.seat-info {
+	overflow: auto;
+	padding: 15px;
+	min-width: 400px;
+}
+
+@media ( max-width : 900px) {
+	.seat-box {
+		width: 100%;
+		text-align: center;
+		border: 2px solid #154063;
+		margin-bottom: 10px;
+	}
+	.seat-info {
+		min-width: 0px;
+		border: 2px solid #154063;
+		width: 100%;
+	}
+	.seat-res-box {
+		border: none;
+		margin-bottom: 10px;
+		padding: 0px;
+	}
+}
+
+.seat-info h3 {
+	color: #154063;
+	font-weight: 800;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.seat-info h3:first-child {
+	margin-top: 5px;
+}
+
+.seat-info p {
+	margin-left: 3px;
+}
+
+.button-box {
+	border: 2px solid #154063;;
+	margin-bottom: 50px;
+	padding: 15px;
+}
+
+/* 좌석 디자인 */
+input[type="radio"]+label {
+	width: 45px;
+	height: 45px;
+	border: 2px solid #154063;
+	background: white;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px;
+}
+
+input[type="radio"]:checked+label {
+	background: #154063;
+	color: white;
+}
+
+input[type="radio"]:disabled+label {
+	background: #efefef;
+	cursor: not-allowed;
+	color: gray;
+}
+
+.seat-row {
+	float: left;
+	margin-left: 10px;
+}
+
+.seat-row:first-child {
+	margin-left: 0px;
+}
+
+.seat-row:nth-child(even) {
+	margin-left: 20px;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+/* 버튼 디자인 */
+#wrapper input[type="submit"] {
+	width: 100px;
+	border: none;
+	background: #154063;
+	color: #efefef;
+	padding: 10px 0px;
+	cursor: pointer;
+}
+
+#wrapper input[type="submit"]:focus {
+	outline: none;
+}
+
+span#message {
+	font-weight: 700;
+	color: #e89415;
+}
+
+.time-set-box {
+	margin-top: 10px;
+}
+
+.time-set-box span {
+	font-weight: 600;
+	font-size: 18px;
+	color: #154063;
+}
+
+/* 시간 선택 */
+input[type="time"] {
+	border: 2px solid #154063;
+	padding-left: 10px;
+}
+
+input[type="time"]:focus {
+	outline: none;
+}
+
+input#enter:disabled {
+	background: #c9c9c9;
+	cursor: not-allowed;
+}
+
+input#exit:disabled {
+	background: #c9c9c9;
+	cursor: not-allowed;
+}

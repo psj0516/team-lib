@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 BoardMapper 인터페이스 이름으로 설정 -->
+<mapper namespace="com.example.mapper.BookMapper">
+
+	<insert id="insertBook">
+		INSERT INTO books (bookcode,bookname,publisher,author,pub_year,hold_date,description) 
+		VALUES (#{bookCode}, #{bookName}, #{publisher}, #{author}, #{pubYear}, #{holdDate}, #{description}) 
+		<!-- 매퍼.java에서 boardvo를 매개변수로 넣어줘서 values를 넣어준것 아니면 그냥 values 없이 사용 가능 아래 getBoardByNum과 비교 -->
+	</insert>
+
+
+	<select id="getBookCnt" resultType="int">
+		SELECT COUNT(*)
+		FROM BOOKS
+		<if test="category=='allSearch'">
+			WHERE bookname LIKE CONCAT('%',#{search},'%') OR author LIKE CONCAT('%',#{search},'%') OR publisher LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category=='bookname'">
+			WHERE bookname LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'author'">
+			WHERE author LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category=='publisher'">
+			WHERE publisher LIKE CONCAT('%',#{search},'%')
+		</if>
+	</select>
+	
+	<select id="getBooksInfo" resultType="BookVo">
+		SELECT * FROM books
+		<if test="category=='allSearch'">
+			WHERE bookname LIKE CONCAT('%',#{search},'%') OR author LIKE CONCAT('%',#{search},'%') OR publisher LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category=='bookname'">
+			WHERE bookname LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category == 'author'">
+			WHERE author LIKE CONCAT('%',#{search},'%')
+		</if>
+		<if test="category=='publisher'">
+			WHERE publisher LIKE CONCAT('%',#{search},'%')
+		</if>
+		LIMIT #{startRow}, #{pageSize}
+	</select>
+	
+	<select id="getBookInfo" resultType="BookVo">
+		SELECT * FROM books WHERE bookcode = #{bookCode}
+	</select>
+
+</mapper>

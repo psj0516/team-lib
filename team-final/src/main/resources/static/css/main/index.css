@@ -1,0 +1,188 @@
+/* index 페이지 */
+
+/* 검색창 */
+#featured-wrapper {
+  overflow: hidden;
+  padding: 2em 0em;
+  background: #efefef;
+  text-align: center;
+}
+
+#featured-wrapper input {
+  background: #efefef;
+  height: 40px;
+  width: 45%;
+  min-width: 300px;
+  max-width: 550px;
+  border: 2px solid #154063;
+  padding-left: 10px;
+}
+
+#featured-wrapper input:focus {
+  border: 2px solid #154063;
+  outline: none;
+}
+
+#featured-wrapper .main-title button {
+  width: 100px;
+  height: 40px;
+  border: 0px;
+  margin-left: -10px;
+  background: #154063;
+  outline: none;
+  color: #efefef;
+  font-size: 16px;
+}
+
+/* 화면 */
+.main-box {
+  background: #154063;
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 380px;
+}
+
+.main-box h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+  color: #efefef;
+  font-weight: 800;
+  float: left;
+}
+
+.notice-link {
+	float: right;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+.notice-link a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+}
+
+.main-box table {
+  width: 100%;
+}
+
+.main-box .cell-right {
+  text-align: right;
+}
+
+.main-box table tr {
+  width: 100%;
+  height: 40px;
+  background: #efefef;
+  border: 1px solid #154063;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* 캐러셀 */
+.carousel-inner .row {
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-inner .img-box {
+  width: 30%;
+  margin: 0px 5px;
+  text-align: center;
+}
+
+@media (min-width: 1520px) {
+  .carousel-box .main-box,
+  .map-box .main-box {
+    height: 350px !important;
+  }
+
+  .carousel-inner img {
+    height: 260px;
+  }
+
+  .map-box iframe {
+    height: 260px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1520px) {
+  .carousel-box .main-box,
+  .map-box .main-box {
+    height: 250px !important;
+  }
+
+  .carousel-inner img {
+    height: 160px;
+  }
+
+  .map-box iframe {
+    height: 160px;
+  }
+}
+
+@media (min-width: 728px) and (max-width: 992px) {
+  .carousel-box .main-box {
+    height: 300px !important;
+  }
+
+  .carousel-inner img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 728px) {
+  .carousel-box .main-box {
+    height: 240px !important;
+  }
+
+  .carousel-inner img {
+    height: 140px;
+  }
+}
+/* 캐러셀 끝 */
+
+/* 달력 */
+.cal-h1 {
+  float: left;
+}
+
+.cal_top {
+  text-align: center;
+  font-size: 20px;
+  color: #efefef;
+  float: right;
+  margin-top: 10px;
+}
+
+.cal_top a {
+  text-align: center;
+  font-size: 20px;
+  color: #efefef;
+}
+table.calendar {
+  border: 1px solid #efefef;
+  display: inline-table;
+}
+table.calendar th {
+  text-align: center;
+  font-weight: 800;
+}
+table.calendar td {
+  vertical-align: middle;
+  border: 1px solid #154063;
+  text-align: center;
+  width: 100px;
+  font-weight: 800;
+}
+
+.cal_top a {
+	text-decoration: none;
+}

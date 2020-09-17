@@ -1,0 +1,214 @@
+/* inquire */
+h2 {
+	color: #154063;
+	font-weight: 800;
+	margin-top: 40px;
+}
+
+.main-box {
+	background: #154063;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#main-box_inq {
+	margin-bottom: 50px;
+}
+
+#main-box_inq h2 {
+	margin-top: 10px;
+	color: #efefef;
+	font-weight: 800;
+	color: #efefef;
+}
+
+.inq_li {
+	width: 920px;
+	height: 60px;
+	/* margin-left: 100px; */
+	background: #154063;
+	padding: 15px;
+	margin-top: 40px;
+	margin-bottom: 2px;
+}
+
+.inq_li h2 {
+	margin: 0px;
+	margin-bottom: 10px;
+	color: #efefef;
+	font-weight: 800;
+}
+
+.lq_list1 {
+	text-align: center;
+	background-color: #efefef;
+	color: #154063;
+	padding: 5px;
+}
+
+.lq_list2 {
+	text-align: center;
+	background-color: #154063;
+	color: #efefef;
+	padding: 7px;
+}
+
+#lq_n1 {
+	color: #154063;
+}
+
+#lq_n2 {
+	color: #efefef;
+}
+
+#qna_li {
+	margin-top: 15px;
+}
+
+#qna_li tr {
+	height: 60px;
+}
+
+#inq_con {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+#accordion {
+	border: 3px solid #154063;
+	width: 920px;
+	heigth: 500px;
+	background-color: #efefef;
+	margin-bottom: 30px;
+	/* margin-left: 100px; */
+	padding-top: 3px;
+}
+
+.card-header {
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.card-header a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: grey;
+}
+
+.card-body {
+	margin-left: 20px;
+}
+
+.card {
+	margin: 5px;
+}
+
+#n_btn button {
+	border: 2px solid white;
+	text-color: black;
+	background-color: white;
+	float: right;
+	margin-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: inline-block;
+	text-color: black;
+}
+
+.table tr {
+	border: 2px solid #154063;
+}
+
+.table th {
+	margin-top: 5px;
+	width: 90px;
+}
+
+.table textarea {
+	height: 200px;
+	resize: none;
+}
+
+.table input, .table textarea {
+	border: 1px solid #154063;
+	border-radius: 0px;
+}
+
+.table input:focus, .table textarea:focus {
+	border: 1px solid #154063;
+	outline: none;
+	box-shadow: none;
+}
+
+.main-box table {
+	background-color: white;
+	margin: 0px;
+}
+
+.main-box table tr {
+	background-color: white;
+}
+
+.pagination li a {
+	color: #54728a;
+}
+
+.button-box {
+	text-align: right;
+}
+
+.button-box button {
+	border: none;
+	background: #154063;
+	color: #efefef;
+	padding: 10px 15px;
+	margin-left: 5px;
+}
+
+.button-box button:focus {
+	border: none;
+	outline: none;
+}
+
+input[type="radio"]:checked+label {
+	border: 3px solid #154063;
+	background: white;
+}
+
+input[type="radio"]+label {
+	width: 14px;
+	height: 14px;
+	border: 2px solid #154063;
+	background: #154063;
+	border-radius: 100px;
+	cursor: pointer;
+	margin: 0px 5px;
+}
+
+input[type="checkbox"]+label {
+	display: inline-block;
+	margin: 0px;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+	background: url("/images/member/checkbox.png") no-repeat center;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label {
+	background: url("/images/member/checkbox-checked.png") no-repeat center;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.main-box label {
+	width: 80px;
+	color: #154063;
+	font-size: 1.1em;
+}
+
+.main-box table input[type="radio"] {
+	display: none;
+}

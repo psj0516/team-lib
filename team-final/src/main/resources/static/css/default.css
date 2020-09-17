@@ -1,0 +1,195 @@
+/* 모든 페이지에 공통으로 적용되는 css */
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #154063;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 11pt;
+	font-weight: 300;
+}
+
+p, ol, ul {
+	margin-top: 0;
+}
+
+ol, ul {
+	padding: 0;
+	list-style: none;
+}
+
+#wrapper {
+	overflow: hidden;
+	padding: 0em 5em;
+	background: #efefef;
+}
+
+nav {
+	padding: 0em 5em;
+}
+
+@media ( min-width : 1520px) {
+	#wrapper {
+		overflow: hidden;
+		padding: 0em 7em;
+	}
+	nav {
+		padding: 0em 7em;
+	}
+}
+
+@media ( max-width : 728px) {
+	#wrapper {
+		overflow: hidden;
+		padding: 0em 3em;
+	}
+	nav {
+		padding: 0em 3em;
+	}
+}
+
+/* 메뉴 */
+.navbar-default {
+	background-color: #154063;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav a {
+	font-weight: 700;
+	color: #efefef;
+}
+
+.navbar-default .navbar-nav a:hover {
+	color: #6f8ba2;
+}
+
+#logo, #logo a {
+	color: #efefef;
+	cursor: pointer;
+	font-family: "Gugi", cursive;
+}
+
+#logo i {
+	margin-left: 15px;
+}
+
+.nav {
+	padding: 15px 20px;
+}
+
+.dropdown-menu {
+	background: #6f8ba2;
+}
+
+.dropdown-menu a {
+	color: #efefef !important;
+}
+
+.dropdown-menu a:hover {
+	background: #6f8ba2 !important;
+	color: #154063 !important;
+}
+
+/* 사이드 메뉴 */
+.sub-menu {
+	margin-top: 40px;
+}
+
+.sub-menu ul {
+	width: 100%;
+	border: 2px solid #154063;
+	text-align: center;
+	border: 2px solid #154063;
+}
+
+.sub-menu li a {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	padding: 7px 10px;
+}
+
+.sub-menu li {
+	border-bottom: 2px solid #154063;
+	cursor: pointer;
+}
+
+.sub-menu li:last-child {
+	border-bottom: none;
+}
+
+.sub-menu li.active {
+	background: #154063;
+	color: white;
+}
+
+.sub-menu li:hover {
+	background: #6f8ba2;
+	color: white
+}
+
+@media ( min-width :767px) {
+	.sub-menu ul {
+		max-width: 180px;
+	}
+}
+
+@media ( max-width :767px) {
+	.sub-menu li a {
+		
+	}
+}
+
+/****************************************/
+/* footer  */
+/*******************************************/
+#copyright {
+	padding: 2em 5em;
+	width: 100%;
+	overflow: hidden;
+	background-color: #154063;
+}
+
+#copyright p {
+	margin-left: 15px;
+	letter-spacing: 0.2em;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	color: #efefef;
+}
+
+#copyright a {
+	text-decoration: none;
+	color: #efefef;
+}
+
+.chat {
+	width: 70px;
+	height: 70px;
+	padding: 4px 15px;
+	border: #e89415 solid 1px;
+	border-radius: 50px;
+	background: #e89415;
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+}
+
+.chat span {
+	cursor: pointer;
+	text-decoration: none;
+	color: #154063;
+	font-size: 40px;
+}
+
+@media ( max-width : 768px ) {
+	.chat {
+		display: none;
+	}
+}
