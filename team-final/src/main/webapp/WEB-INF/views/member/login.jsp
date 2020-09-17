@@ -46,6 +46,6 @@
 	<!-- footer -->
 	<script src="/script/jquery-3.5.1.js"></script>
 	<script src="/script/bootstrap.js"></script>
-	<script src="/script/member/logincheck.js"></script>
+	<script src="/script/member/loginCheck.js"></script>
 </body>
 </html>
