@@ -142,7 +142,6 @@
 						<tr>
 							<td colspan="2" class="align-right button-box">
 								<button type="button" id="btn" class="button-custom">수정하기</button>
-								<button type="button" class="button-custom">비밀번호 변경</button>
 							</td>
 							<td></td>
 						</tr>
